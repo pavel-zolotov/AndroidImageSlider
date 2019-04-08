@@ -11,17 +11,17 @@ import android.util.AttributeSet;
  */
 public class InfiniteViewPager extends ViewPagerEx {
 
-    public InfiniteViewPager(Context context) {
-        super(context);
-    }
+	public InfiniteViewPager(Context context) {
+		super(context);
+	}
 
-    public InfiniteViewPager(Context context, AttributeSet attrs) {
-        super(context, attrs);
-    }
+	public InfiniteViewPager(Context context, AttributeSet attrs) {
+		super(context, attrs);
+	}
 
-    @Override
-    public void setAdapter(PagerAdapter adapter) {
-        super.setAdapter(adapter);
-    }
+	@Override
+	public void setAdapter(PagerAdapter adapter) {
+		super.setAdapter(adapter);
+	}
 
 }

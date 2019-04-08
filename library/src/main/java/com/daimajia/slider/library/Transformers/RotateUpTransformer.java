@@ -12,11 +12,11 @@ public class RotateUpTransformer extends BaseTransformer {
 		final float rotation = ROT_MOD * position;
 
 		view.setPivotX(width * 0.5f);
-        view.setPivotY(0f);
-        view.setTranslationX(0f);
-        view.setRotation(rotation);
+		view.setPivotY(0f);
+		view.setTranslationX(0f);
+		view.setRotation(rotation);
 	}
-	
+
 	@Override
 	protected boolean isPagingEnabled() {
 		return true;

@@ -15,9 +15,9 @@ public class TabletTransformer extends BaseTransformer {
 		final float rotation = (position < 0 ? 30f : -30f) * Math.abs(position);
 
 		view.setTranslationX(getOffsetXForRotation(rotation, view.getWidth(), view.getHeight()));
-        view.setPivotX(view.getWidth() * 0.5f);
-        view.setPivotY(0);
-        view.setRotationY(rotation);
+		view.setPivotX(view.getWidth() * 0.5f);
+		view.setPivotY(0);
+		view.setRotationY(rotation);
 	}
 
 	protected static final float getOffsetXForRotation(float degrees, int width, int height) {

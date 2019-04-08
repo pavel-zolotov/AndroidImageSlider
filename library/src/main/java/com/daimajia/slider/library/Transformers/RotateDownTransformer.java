@@ -13,10 +13,10 @@ public class RotateDownTransformer extends BaseTransformer {
 		final float rotation = ROT_MOD * position * -1.25f;
 
 		view.setPivotX(width * 0.5f);
-        view.setPivotY(height);
-        view.setRotation(rotation);
+		view.setPivotY(height);
+		view.setRotation(rotation);
 	}
-	
+
 	@Override
 	protected boolean isPagingEnabled() {
 		return true;
