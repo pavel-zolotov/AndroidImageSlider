@@ -1,6 +1,8 @@
 # Android Image Slider [![Build Status](https://travis-ci.org/daimajia/AndroidImageSlider.svg)](https://travis-ci.org/daimajia/AndroidImageSlider)
 
-Updated from 
+Updated from https://github.com/daimajia/AndroidImageSlider which was getting very old. I needed to get a project working that had used this a while back but was now incompatible with modern build tools and android libs. 
+
+This doc was updated in relation to Android Studio 3.4 compatibility.
 
 ---
 
