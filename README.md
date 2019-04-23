@@ -1,7 +1,9 @@
 # Android Image Slider [![Build Status](https://travis-ci.org/daimajia/AndroidImageSlider.svg)](https://travis-ci.org/daimajia/AndroidImageSlider)
 
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/daimajia/AndroidImageSlider?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
- 
+Updated from 
+
+---
+
 This is an amazing image slider for the Android platform. I decided to open source this because there is really not an attractive, convenient slider widget in Android.
  
 You can easily load images from an internet URL, drawable, or file. And there are many kinds of amazing animations you can choose. :-D
@@ -10,27 +12,38 @@ You can easily load images from an internet URL, drawable, or file. And there ar
  
 ![](http://ww3.sinaimg.cn/mw690/610dc034jw1egzor66ojdg20950fknpe.gif)
 
-[Download Apk](https://github.com/daimajia/AndroidImageSlider/releases/download/v1.0.8/demo-1.0.8.apk)
- 
 ## Usage
 
 ### Step 1
 
 #### Gradle
 
+The 'demo' (app ui) project in this repo uses the 'library' project as a dependency. 
 ```groovy
 dependencies {
+    implementation project(':library')
     implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation "com.android.support:support-v4:28.0.0"
-    implementation 'com.squareup.picasso:picasso:2.71828'
-    implementation 'com.android.support:exifinterface:28.0.0'
-    implementation 'com.android.support:animated-vector-drawable:28.0.0'    	
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
 }
 ```
 
+In an external project which I updated to use androidx, I have used the following dependancies:
+```groovy
+dependencies {
+    implementation 'androidx.exifinterface:exifinterface:1.0.0-beta01'
+    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
+    implementation 'com.github.simiansim:AndroidImageSlider:master-SNAPSHOT'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+}
+```
+
+![Migrating to AndroidX](https://developer.android.com/jetpack/androidx/migrate)
+
+
 ### Step 2
 
-Add permissions (if necessary) to your `AndroidManifest.xml`
+The Library Manifest includes these permissions, in its own `AndroidManifest.xml`. You should not need to add these again to your own manifest, see note below.
 
 ```xml
 <!-- if you want to load images from the internet -->
@@ -54,8 +67,8 @@ Add the Slider to your layout:
         android:layout_width="match_parent"
         android:layout_height="200dp"
 />
-```        
- 
+```
+
 There are some default indicators. If you want to use a provided indicator:
  
 ```java
