@@ -20,40 +20,13 @@ You can easily load images from an internet URL, drawable, or file. And there ar
 
 ```groovy
 dependencies {
-    	compile "com.android.support:support-v4:+"
-    	compile 'com.squareup.picasso:picasso:2.3.2'
-    	compile 'com.nineoldandroids:library:2.4.0'
-    	compile 'com.daimajia.slider:library:1.1.5@aar'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation "com.android.support:support-v4:28.0.0"
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.android.support:exifinterface:28.0.0'
+    implementation 'com.android.support:animated-vector-drawable:28.0.0'    	
 }
 ```
-
-
-#### Maven
-
-```xml
-<dependency>
-    <groupId>com.squareup.picasso</groupId>
-    <artifactId>picasso</artifactId>
-    <version>2.3.2</version>
-</dependency>
-<dependency>
-    <groupId>com.nineoldandroids</groupId>
-    <artifactId>library</artifactId>
-    <version>2.4.0</version>
-</dependency>
-<dependency>
-    <groupId>com.daimajia.slider</groupId>
-    <artifactId>library</artifactId>
-    <version>1.1.2</version>
-    <type>apklib</type>
-</dependency>
-```
-
-#### Eclipse
-
-For Eclipse users, I provided a sample project which orgnized as Eclipse way. You can download it from [here](https://github.com/daimajia/AndroidImageSlider/releases/download/v1.0.9/AndroidImageSlider-Eclipse.zip), and make some changes to fit your project.
-
-Notice: It's the version of 1.0.9, it may not update any more. You can update manually by yourself.
 
 ### Step 2
 
@@ -94,7 +67,9 @@ There are some default indicators. If you want to use a provided indicator:
         />
 ```
 
-[Code example](https://github.com/daimajia/AndroidImageSlider/blob/master/demo%2Fsrc%2Fmain%2Fjava%2Fcom%2Fdaimajia%2Fslider%2Fdemo%2FMainActivity.java)
+[Code example](https://github.com/simiansim/AndroidImageSlider/blob/master/demo/src/main/java/com/daimajia/slider/demo/MainActivity.java)
+
+[Layout example](https://github.com/simiansim/AndroidImageSlider/blob/master/demo/src/main/res/layout/activity_main.xml)
  
 ====
  
@@ -105,7 +80,6 @@ Please visit [Wiki](https://github.com/daimajia/AndroidImageSlider/wiki)
 ## Thanks
 
 - [Picasso](https://github.com/square/picasso)
-- [NineOldAndroids](https://github.com/JakeWharton/NineOldAndroids)
 - [ViewPagerTransforms](https://github.com/ToxicBakery/ViewPagerTransforms)
 
 ##About me
