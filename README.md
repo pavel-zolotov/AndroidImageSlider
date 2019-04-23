@@ -41,7 +41,7 @@ dependencies {
 }
 ```
 
-![Migrating to AndroidX](https://developer.android.com/jetpack/androidx/migrate)
+[Migrating to AndroidX](https://developer.android.com/jetpack/androidx/migrate)
 
 
 ### Step 2
@@ -98,6 +98,3 @@ Please visit [Wiki](https://github.com/daimajia/AndroidImageSlider/wiki)
 - [Picasso](https://github.com/square/picasso)
 - [ViewPagerTransforms](https://github.com/ToxicBakery/ViewPagerTransforms)
 
-##About me
- 
-I am a student in mainland China. I love Google, love Android, love everything that is interesting. If you get any problems when using this library or you have an internship opportunity, please feel free to [email me](mailto:daimajia@gmail.com). :smiley:
