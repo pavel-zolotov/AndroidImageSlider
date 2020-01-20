@@ -1,10 +1,12 @@
 package com.daimajia.slider.library.SliderTypes;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.RequestBuilder;
 
 import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
 
@@ -20,8 +22,18 @@ public class GlideSliderView extends DefaultSliderView {
             progressBar.setVisibility(View.GONE);
         }
 
-        Glide.with(getContext())
-                .load(getUrl())
+        RequestBuilder<Drawable> requestBuilder;
+        if(getUrl() != null){
+            requestBuilder = Glide.with(getContext()).load(getUrl());
+        }else if(getFile() != null){
+            requestBuilder = Glide.with(getContext()).load(getFile());
+        }else if(getRes() != 0){
+            requestBuilder = Glide.with(getContext()).load(getRes());
+        }else{
+            return;
+        }
+
+        requestBuilder
                 .centerCrop()
                 .transition(withCrossFade())
                 .into(targetImageView);
