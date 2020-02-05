@@ -24,11 +24,11 @@ public class GlideSliderView extends DefaultSliderView {
 
         RequestBuilder<Drawable> requestBuilder;
         if(getUrl() != null){
-            requestBuilder = Glide.with(getContext()).load(getUrl());
+            requestBuilder = Glide.with(mContext).load(getUrl());
         }else if(getFile() != null){
-            requestBuilder = Glide.with(getContext()).load(getFile());
+            requestBuilder = Glide.with(mContext).load(getFile());
         }else if(getRes() != 0){
-            requestBuilder = Glide.with(getContext()).load(getRes());
+            requestBuilder = Glide.with(mContext).load(getRes());
         }else{
             return;
         }
