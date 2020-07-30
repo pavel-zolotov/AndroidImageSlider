@@ -3,7 +3,7 @@ package com.daimajia.slider.library;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Message;
-import android.support.v4.view.PagerAdapter;
+import androidx.viewpager.widget.PagerAdapter;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -698,5 +698,16 @@ public class SliderLayout extends RelativeLayout{
 
     public void moveNextPosition() {
         moveNextPosition(true);
+    }
+
+    // Thanks to: https://github.com/daimajia/AndroidImageSlider/issues/122#issue-91440856
+    @Override
+    public void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        if(mCycleTimer != null) mCycleTimer.cancel();
+        if(mCycleTask != null) mCycleTask.cancel();
+        if(mResumingTask != null) mResumingTask.cancel();
+        if(mResumingTimer != null) mResumingTimer.cancel();
+        mh.removeCallbacksAndMessages(null);
     }
 }

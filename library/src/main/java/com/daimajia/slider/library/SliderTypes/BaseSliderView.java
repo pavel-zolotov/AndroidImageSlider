@@ -155,6 +155,14 @@ public abstract class BaseSliderView {
         return mUrl;
     }
 
+    public File getFile(){
+        return mFile;
+    }
+
+    public int getRes(){
+        return mRes;
+    }
+
     public boolean isErrorDisappear(){
         return mErrorDisappear;
     }
