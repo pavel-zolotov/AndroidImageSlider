@@ -722,6 +722,18 @@ public class SliderLayout extends RelativeLayout {
         moveNextPosition(true);
     }
 
+    public void isLoopScrollEnabled(boolean loop) {
+        mLoopCycle = loop;
+        PagerAdapter theAdapter = null;
+        if (mLoopCycle) {
+            theAdapter = new InfinitePagerAdapter(mSliderAdapter);
+        } else {
+            theAdapter = mSliderAdapter;
+        }
+        mViewPager = (InfiniteViewPager) findViewById(R.id.daimajia_slider_viewpager);
+        mViewPager.setAdapter(theAdapter);
+    }
+
     // Thanks to: https://github.com/daimajia/AndroidImageSlider/issues/122#issue-91440856
     @Override
     public void onDetachedFromWindow() {
