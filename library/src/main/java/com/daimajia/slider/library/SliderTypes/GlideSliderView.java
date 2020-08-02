@@ -18,7 +18,15 @@ public class GlideSliderView extends DefaultSliderView {
 
     @Override
     protected void bindEventAndShow(final View v, ImageView targetImageView) {
-        super.bindEventAndShow(v, targetImageView);
+        v.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mOnSliderClickListener != null){
+                    mOnSliderClickListener.onSliderClick(GlideSliderView.this);
+                }
+            }
+        });
+
         View progressBar = v.findViewById(com.daimajia.slider.library.R.id.loading_bar);
         if (progressBar != null) {
             progressBar.setVisibility(View.GONE);
