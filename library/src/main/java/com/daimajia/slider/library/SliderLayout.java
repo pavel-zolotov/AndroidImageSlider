@@ -614,8 +614,10 @@ public class SliderLayout extends RelativeLayout {
 
     private SliderAdapter getRealAdapter() {
         PagerAdapter adapter = mViewPager.getAdapter();
-        if (adapter != null) {
+        if (adapter instanceof InfinitePagerAdapter) {
             return ((InfinitePagerAdapter) adapter).getRealAdapter();
+        } else if (adapter instanceof SliderAdapter) {
+            return (SliderAdapter) adapter;
         }
         return null;
     }
